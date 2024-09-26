@@ -121,13 +121,13 @@ async function onSearch(event) {
 }
 
 async function onLoadMore() {
-  showLoader(loadingIndicator); // Показати завантажувач
+  showLoader(loadingIndicator); 
   hideLoadMoreButton(loadMoreButton); 
 
   try {
     page += 1;  
     const data = await fetchImages(currentQuery, page);
-    hideLoader(loadingIndicator); // Сховати завантажувач
+    hideLoader(loadingIndicator); 
 
     if (data.hits.length === 0) {
       iziToast.info({
